@@ -27,51 +27,87 @@ function TravelForm({ onSubmit }) {
 
   return (
     <form className="travel-form" onSubmit={handleSubmit}>
-      <input name="destination" placeholder="Gdzie jedziesz?" required />
 
-      <select name="budget">
-        <option value="Niski">Niski</option>
-        <option value="Średni">Średni</option>
-        <option value="Wysoki">Wysoki</option>
-      </select>
+      <div>
+        <label htmlFor="destination">Miejsce wyjazdu</label>
+        <input
+          id="destination"
+          name="destination"
+          placeholder="Gdzie jedziesz?"
+          required
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="budget">Budżet</label>
+        <select id="budget" name="budget">
+          <option value="Niski">Niski</option>
+          <option value="Średni">Średni</option>
+          <option value="Wysoki">Wysoki</option>
+        </select>
+      </div>
+      
+      <div>
+        <label htmlFor="recreation_type">Rodzaj wyjazdu</label>
+        <select id="recreation_type" name="recreation_type">
+          <option value="Kultura i Technologie">Kultura i Technologie</option>
+          <option value="Wypoczynek">Wypoczynek</option>
+          <option value="Zwiedzanie">Zwiedzanie</option>
+          <option value="Sztuka">Sztuka</option>
+          <option value="Popularne miejsca">Popularne miejsca</option>
+        </select>
+      </div>
+      
+      <div>
+        <label htmlFor="interests">Zainteresowania</label>
+        <input
+          id="interests"
+          name="interests"
+          placeholder="Sushi, Retro Gaming"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="date_range">Data wyjazdu</label>
+        <input
+          id="date_range"
+          name="date_range"
+          placeholder="10-12 październik"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="travelers_count">Liczba osób</label>
+        <input
+          id="travelers_count"
+          name="travelers_count"
+          type="number"
+          min="1"
+          defaultValue="1"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="diet">Dieta</label>
+        <input
+          id="diet"
+          name="diet"
+          placeholder="Brak alergii"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="additional_info">Dodatkowe informacje</label>
+        <input
+          id="additional_info"
+          name="additional_info"
+          placeholder="Dodatkowe info"
+        />
+      </div>
 
-      <select name="recreation_type">
-            <option value="Kultura i Technologie">Kultura i Technologie</option>
-            <option value="Wypoczynek">Wypoczynek</option>
-            <option value="Zwiedzanie">Zwiedzanie</option>
-            <option value="Sztuka">Sztuka</option>
-            <option value="Popularne miejsca">Popularne miejsca</option>
-      </select>
+  <button type="submit">Generuj plan</button>
 
-      <input
-        name="interests"
-        placeholder="Sushi, Retro Gaming"
-      />
-
-      <input
-        name="date_range"
-        placeholder="10-12 październik"
-      />
-
-      <input
-        name="travelers_count"
-        type="number"
-        min="1"
-        defaultValue="1"
-      />
-
-      <input
-        name="diet"
-        placeholder="Brak alergii"
-      />
-
-      <input
-        name="additional_info"
-        placeholder="Dodatkowe info"
-      />
-
-      <button type="submit">Generuj plan</button>
-    </form>
+</form>
   );
 }
 export default TravelForm

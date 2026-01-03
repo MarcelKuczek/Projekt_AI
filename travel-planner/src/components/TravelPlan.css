@@ -64,6 +64,8 @@
     margin: 0;
     font-size: 1.2rem;
     color: var(--accent-color);
+    white-space: normal;
+    word-break:break-word;
 }
 
 .day-card ul {
